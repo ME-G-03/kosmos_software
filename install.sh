@@ -12,6 +12,13 @@ sudo pip install sounddevice --break-system-package
 #Desactivation du bluetooth (raisons énergétiques)
 sudo systemctl disable bluetooth
 
+# Configuration IP statique
+sudo nmcli connection modify "Wired connection 1" \
+ipv4.addresses 192.168.10.2/24 \
+ipv4.gateway 192.168.10.1 \
+ipv4.dns 192.168.10.1 \
+ipv4.method manual
+
 # Copier du fichier kosmos_system.ini
 sudo cp -n /home/$USER/kosmos_software/kosmos_system_template.ini /home/$USER/kosmos_system.ini 
 sudo chown $USER:$USER /home/$USER/kosmos_system.ini
