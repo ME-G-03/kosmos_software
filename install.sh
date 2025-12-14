@@ -46,7 +46,7 @@ sudo raspi-config nonint do_i2c 0
 sudo raspi-config nonint do_vnc 0
 sudo raspi-config nonint do_serial_hw 0
 sudo raspi-config nonint do_serial_cons 1
-
+sudo raspi-config nonint do_ssh 0
 
 #Ajout de la ligne de commande dans crontab qui permet le lancement au demarrage et création d'un dossier log
 mkdir -p /home/$USER/logfile_kosmos
